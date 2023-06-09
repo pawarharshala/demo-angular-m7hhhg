@@ -3,9 +3,6 @@ import { UserService } from '../user.service';
 import { User } from '../user';
 import { Observable } from 'rxjs';
 import { FormsModule } from '@angular/forms';
-import { ToastrService } from 'ngx-toastr';
-import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
-import { NgbModal, ModalDismissReasons, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-demo',
