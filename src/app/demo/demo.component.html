@@ -1,0 +1,32 @@
+
+
+
+<h4 style="text-align:center;padding-top:30px">Displays a list of tasks.</h4>
+
+<div class="container mt-5">
+    <table class="table table-striped" style="border: 3px solid black;">
+			<thead class="thead-dark" style="font-size:15px;">
+            <tr class="table-primary" style="text-align: center;">
+            <th scope="col"><b>Id</b></th>
+            <th scope="col"><b>Title</b></th>
+            <th scope="col"><b>Completed</b></th>
+            <th scope="col"><b>CheckBox</b></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dt of data">
+            <td scope="row" style="text-align: center;">{{dt.id}}</td>
+            <td scope="row">{{dt.title}}</td>
+            <td scope="row" style="text-align: center;">{{dt.completed}}</td>
+            <td scope="row" style="text-align: center;">  
+                    <input type="checkbox"  class="form-check-input"
+                    type="checkbox"
+                    [value]="dt.id"
+                    [checked]="dt.select"
+                    (change)="onChangeData($event)">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
